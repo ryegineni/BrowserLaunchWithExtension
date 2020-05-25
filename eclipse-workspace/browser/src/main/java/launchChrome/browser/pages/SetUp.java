@@ -38,7 +38,7 @@ public class SetUp {
 	public void configureDriverPath() throws IOException {
 
 		if (System.getProperty("os.name").startsWith("Linux")) {
-			String chromeDriverPath = System.getProperty("user.dir") + "/chromedriver_linux";
+			String chromeDriverPath = System.getProperty("user.dir") + "/chromedriver_linux_new";
 			System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 		}
 		if (System.getProperty("os.name").startsWith("Mac")) {
