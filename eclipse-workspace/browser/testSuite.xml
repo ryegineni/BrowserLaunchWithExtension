@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="StakeUI-Dashbaord-automation" preserve-order="true">
+	<test name="Wallet">
+		<classes>
+			<class name="launchChrome.browser">
+				<methods>
+					<include name="LaunchChrome" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
