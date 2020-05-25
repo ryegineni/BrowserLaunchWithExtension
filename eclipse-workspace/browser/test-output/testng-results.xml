@@ -2,35 +2,35 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="49" started-at="2020-05-25T12:44:38Z" finished-at="2020-05-25T12:44:38Z">
+  <suite name="StakeUI-Dashbaord-automation" duration-ms="53" started-at="2020-05-25T14:32:35Z" finished-at="2020-05-25T14:32:35Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="49" started-at="2020-05-25T12:44:38Z" finished-at="2020-05-25T12:44:38Z">
-      <class name="launchChrome.browser.LaunchChrome">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:launchChrome.browser.LaunchChrome@78b729e6]" name="beforeSuite" is-config="true" duration-ms="39222" started-at="2020-05-25T12:43:59Z" finished-at="2020-05-25T12:44:38Z">
+    <test name="BrowserLaunch" duration-ms="53" started-at="2020-05-25T14:32:35Z" finished-at="2020-05-25T14:32:35Z">
+      <class name="launchChrome.browser.testcases.LaunchChromeTest">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:launchChrome.browser.testcases.LaunchChromeTest@31a5c39e]" name="beforeSuite" is-config="true" duration-ms="26535" started-at="2020-05-25T14:32:08Z" finished-at="2020-05-25T14:32:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:launchChrome.browser.LaunchChrome@78b729e6]" name="beforeMethod" is-config="true" duration-ms="2" started-at="2020-05-25T12:44:38Z" finished-at="2020-05-25T12:44:38Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:launchChrome.browser.testcases.LaunchChromeTest@31a5c39e]" name="beforeMethod" is-config="true" duration-ms="5" started-at="2020-05-25T14:32:35Z" finished-at="2020-05-25T14:32:35Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void launchChrome.browser.LaunchChrome.browserLaunchWithExtension()]]>
+                <![CDATA[public void launchChrome.browser.testcases.LaunchChromeTest.browserLaunchWithExtension()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="browserLaunchWithExtension()[pri:0, instance:launchChrome.browser.LaunchChrome@78b729e6]" name="browserLaunchWithExtension" duration-ms="10" started-at="2020-05-25T12:44:38Z" finished-at="2020-05-25T12:44:38Z">
+        <test-method status="PASS" signature="browserLaunchWithExtension()[pri:0, instance:launchChrome.browser.testcases.LaunchChromeTest@31a5c39e]" name="browserLaunchWithExtension" duration-ms="9" started-at="2020-05-25T14:32:35Z" finished-at="2020-05-25T14:32:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserLaunchWithExtension -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:launchChrome.browser.LaunchChrome@78b729e6]" name="afterSuite" is-config="true" duration-ms="1102" started-at="2020-05-25T12:44:38Z" finished-at="2020-05-25T12:44:39Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:launchChrome.browser.testcases.LaunchChromeTest@31a5c39e]" name="afterSuite" is-config="true" duration-ms="1168" started-at="2020-05-25T14:32:35Z" finished-at="2020-05-25T14:32:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- launchChrome.browser.LaunchChrome -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- launchChrome.browser.testcases.LaunchChromeTest -->
+    </test> <!-- BrowserLaunch -->
+  </suite> <!-- StakeUI-Dashbaord-automation -->
 </testng-results>

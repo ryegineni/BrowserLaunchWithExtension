@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="StakeUI-Dashbaord-automation" preserve-order="true">
-	<test name="Wallet">
+	<test name="BrowserLaunch">
 		<classes>
-			<class name="launchChrome.browser">
+			<class name="launchChrome.browser.testcases.LaunchChromeTest">
 				<methods>
-					<include name="LaunchChrome" />
+					<include name="browserLaunchWithExtension" />
 				</methods>
 			</class>
 		</classes>

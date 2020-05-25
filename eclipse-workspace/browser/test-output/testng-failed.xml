@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="launchChrome.browser.LaunchChrome">
+      <class name="launchChrome.browser.testcases.LaunchChrome">
         <methods>
-          <include name="browserLaunchWithExtension"/>
-          <include name="beforeSuite"/>
           <include name="beforeMethod"/>
+          <include name="browserLaunchWithExtension"/>
           <include name="afterSuite"/>
+          <include name="beforeSuite"/>
         </methods>
-      </class> <!-- launchChrome.browser.LaunchChrome -->
+      </class> <!-- launchChrome.browser.testcases.LaunchChrome -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
