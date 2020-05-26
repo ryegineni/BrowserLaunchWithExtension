@@ -62,6 +62,8 @@ public class SetUp {
 			e.printStackTrace();
 		}
 		ChromeOptions options = new ChromeOptions();
+		options.addExtensions(new File(System.getProperty("user.dir") + "/extension_7_7_8_0.crx"));
+		Thread.sleep(5000);
 		// options.addArguments("--headless");
 		// options.addArguments("--window-size=1920,1080");
 		// options.addArguments("--no-sandbox");
@@ -69,9 +71,8 @@ public class SetUp {
 		//options.addArguments("--headless");
 		//options.addArguments("--window-size=1920,1080");
 		//options.addArguments("staraddArgumentst-maximized");
-		options.addArguments("--remote-debugging-port=9222");
-		Thread.sleep(3000);
-		options.addExtensions(new File(System.getProperty("user.dir") + "/extension_7_7_8_0.crx"));
+		
+		
 		Thread.sleep(3000);
 		DesiredCapabilities caps = DesiredCapabilities.chrome();
 		Thread.sleep(5000);
