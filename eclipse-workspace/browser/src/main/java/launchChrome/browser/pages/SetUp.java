@@ -67,9 +67,9 @@ public class SetUp {
 		// options.addArguments("--no-sandbox");
 		options.addArguments("--no-sandbox");
 		//options.addArguments("--headless");
-		options.addArguments("--window-size=1920,1080");
-		options.addArguments("start-maximized");
-		options.setExperimentalOption("useAutomationExtension", true);
+		//options.addArguments("--window-size=1920,1080");
+		//options.addArguments("staraddArgumentst-maximized");
+		options.addArguments("--remote-debugging-port=9222");
 		Thread.sleep(3000);
 		options.addExtensions(new File(System.getProperty("user.dir") + "/extension_7_7_8_0.crx"));
 		Thread.sleep(3000);
