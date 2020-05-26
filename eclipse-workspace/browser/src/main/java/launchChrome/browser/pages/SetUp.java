@@ -69,7 +69,7 @@ public class SetUp {
 		//options.addArguments("--headless");
 		options.addArguments("--window-size=1920,1080");
 		options.addArguments("start-maximized");
-		options.setExperimentalOption("useAutomationExtension", false);
+		options.setExperimentalOption("useAutomationExtension", true);
 		Thread.sleep(3000);
 		options.addExtensions(new File(System.getProperty("user.dir") + "/extension_7_7_8_0.crx"));
 		Thread.sleep(3000);
