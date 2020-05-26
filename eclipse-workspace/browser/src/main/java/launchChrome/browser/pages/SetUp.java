@@ -60,9 +60,10 @@ public class SetUp {
 			e.printStackTrace();
 		}
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless");
-		options.addArguments("--window-size=1920,1080");
+		//options.addArguments("--headless");
+		//options.addArguments("--window-size=1920,1080");
 		options.addArguments("--no-sandbox");
+		Thread.sleep(3000);
 		options.addExtensions(new File(System.getProperty("user.dir") + "/extension_7_7_8_0.crx"));
 		DesiredCapabilities caps = DesiredCapabilities.chrome();
 		caps.setCapability(ChromeOptions.CAPABILITY, options);
