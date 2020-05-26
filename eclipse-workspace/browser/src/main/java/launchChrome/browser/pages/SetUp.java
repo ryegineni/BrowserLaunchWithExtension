@@ -64,7 +64,10 @@ public class SetUp {
 		ChromeOptions options = new ChromeOptions();
 		// options.addArguments("--headless");
 		// options.addArguments("--window-size=1920,1080");
-		//options.addArguments("--no-sandbox");
+		// options.addArguments("--no-sandbox");
+		options.addArguments("--no-sandbox");
+		options.addArguments("--headless");
+		options.setExperimentalOption("useAutomationExtension", false);
 		Thread.sleep(3000);
 		options.addExtensions(new File(System.getProperty("user.dir") + "/extension_7_7_8_0.crx"));
 		Thread.sleep(3000);
@@ -76,7 +79,7 @@ public class SetUp {
 		driver = new ChromeDriver(caps);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//button[@class='button btn-primary first-time-flow__button']")).click();
-		//driver.manage().window().maximize();
+		// driver.manage().window().maximize();
 		System.out.println("Launching Google search");
 		driver.get("https://www.google.com/");
 
