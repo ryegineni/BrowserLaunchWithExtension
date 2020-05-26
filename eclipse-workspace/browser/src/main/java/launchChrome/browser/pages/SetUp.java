@@ -5,7 +5,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -60,17 +62,19 @@ public class SetUp {
 			e.printStackTrace();
 		}
 		ChromeOptions options = new ChromeOptions();
-		//options.addArguments("--headless");
-		//options.addArguments("--window-size=1920,1080");
+		// options.addArguments("--headless");
+		// options.addArguments("--window-size=1920,1080");
 		options.addArguments("--no-sandbox");
-		options.setExperimentalOption("useAutomationExtension", false);
 		Thread.sleep(3000);
 		options.addExtensions(new File(System.getProperty("user.dir") + "/extension_7_7_8_0.crx"));
 		DesiredCapabilities caps = DesiredCapabilities.chrome();
+		Thread.sleep(5000);
 		caps.setCapability(ChromeOptions.CAPABILITY, options);
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		driver = new ChromeDriver(caps);
-		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.findElement(By.xpath("//button[@class='button btn-primary first-time-flow__button']")).click();
+		//driver.manage().window().maximize();
 		System.out.println("Launching Google search");
 		driver.get("https://www.google.com/");
 
