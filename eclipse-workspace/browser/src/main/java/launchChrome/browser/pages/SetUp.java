@@ -40,7 +40,7 @@ public class SetUp {
 	public void configureDriverPath() throws IOException {
 
 		if (System.getProperty("os.name").startsWith("Linux")) {
-			String chromeDriverPath = System.getProperty("user.dir") + "/chromedriver_linux_new";
+			String chromeDriverPath = System.getProperty("user.dir") + "/chromedriver";
 			System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 		}
 		if (System.getProperty("os.name").startsWith("Mac")) {
@@ -63,6 +63,7 @@ public class SetUp {
 		}
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--no-sandbox");
+		options.addArguments("--disable-dev-shm-usage");
 		Thread.sleep(5000);
 		System.out.println("Installing metamask extension");
 		options.addExtensions(new File(System.getProperty("user.dir") + "/extension_7_7_8_0.crx"));
