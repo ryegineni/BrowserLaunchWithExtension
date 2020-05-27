@@ -62,12 +62,15 @@ public class SetUp {
 			e.printStackTrace();
 		}
 		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--no-sandbox");
+		Thread.sleep(5000);
+		System.out.println("Installing metamask extension");
 		options.addExtensions(new File(System.getProperty("user.dir") + "/extension_7_7_8_0.crx"));
 		Thread.sleep(5000);
 		// options.addArguments("--headless");
 		// options.addArguments("--window-size=1920,1080");
 		// options.addArguments("--no-sandbox");
-		options.addArguments("--no-sandbox");
+		
 		//options.addArguments("--headless");
 		//options.addArguments("--window-size=1920,1080");
 		//options.addArguments("staraddArgumentst-maximized");
@@ -79,7 +82,9 @@ public class SetUp {
 		caps.setCapability(ChromeOptions.CAPABILITY, options);
 		Thread.sleep(3000);
 		System.setProperty("webdriver.chrome.silentOutput", "true");
+		System.out.println("Launching browser");
 		driver = new ChromeDriver(caps);
+		System.out.println("Clicking on getting started button");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//button[@class='button btn-primary first-time-flow__button']")).click();
 		// driver.manage().window().maximize();
