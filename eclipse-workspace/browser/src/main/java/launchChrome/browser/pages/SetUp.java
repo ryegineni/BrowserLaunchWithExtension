@@ -85,9 +85,9 @@ public class SetUp {
 		//System.setProperty("webdriver.chrome.silentOutput", "true");
 		System.out.println("Launching browser");
 		driver = new ChromeDriver(caps);
-		System.out.println("Clicking on getting started button");
+		//System.out.println("Clicking on getting started button");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("//button[@class='button btn-primary first-time-flow__button']")).click();
+		//driver.findElement(By.xpath("//button[@class='button btn-primary first-time-flow__button']")).click();
 		// driver.manage().window().maximize();
 		System.out.println("Launching Google search");
 		driver.get("https://www.google.com/");
