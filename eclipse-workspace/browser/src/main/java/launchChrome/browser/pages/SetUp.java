@@ -66,8 +66,8 @@ public class SetUp {
 		options.addArguments("--disable-dev-shm-usage");
 		Thread.sleep(5000);
 		System.out.println("Installing metamask extension");
-		options.addExtensions(new File(System.getProperty("user.dir") + "/extension_7_7_8_0.crx"));
-		Thread.sleep(5000);
+		//options.addExtensions(new File(System.getProperty("user.dir") + "/extension_7_7_8_0.crx"));
+		//Thread.sleep(5000);
 		// options.addArguments("--headless");
 		// options.addArguments("--window-size=1920,1080");
 		// options.addArguments("--no-sandbox");
@@ -91,6 +91,8 @@ public class SetUp {
 		// driver.manage().window().maximize();
 		System.out.println("Launching Google search");
 		driver.get("https://www.google.com/");
+		Thread.sleep(5000);
+		System.out.println("Page title="+driver.getTitle());
 
 	}
 
