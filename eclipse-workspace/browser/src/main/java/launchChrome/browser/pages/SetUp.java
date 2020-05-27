@@ -81,7 +81,7 @@ public class SetUp {
 		Thread.sleep(5000);
 		caps.setCapability(ChromeOptions.CAPABILITY, options);
 		Thread.sleep(3000);
-		System.setProperty("webdriver.chrome.silentOutput", "true");
+		//System.setProperty("webdriver.chrome.silentOutput", "true");
 		System.out.println("Launching browser");
 		driver = new ChromeDriver(caps);
 		System.out.println("Clicking on getting started button");
