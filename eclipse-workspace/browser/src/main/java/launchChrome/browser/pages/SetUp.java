@@ -56,6 +56,8 @@ public class SetUp {
 	}
 
 	public void browserLaunch() throws InterruptedException {
+		try { configureDriverPath(); 
+		} catch (IOException e) { e.printStackTrace(); }
 		/*
 		 * try { configureDriverPath(); } catch (IOException e) { e.printStackTrace(); }
 		 * ChromeOptions options = new ChromeOptions();
