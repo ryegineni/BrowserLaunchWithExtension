@@ -40,7 +40,7 @@ public class SetUp {
 		if (System.getProperty("os.name").startsWith("Linux")) {
 			//String chromeDriverPath = System.getProperty("user.dir") + "/chromedriver";
 			//System.setProperty("webdriver.chrome.driver", chromeDriverPath);
-			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/geckodriver_linux64");
+			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/geckodriver24");
 		}
 		if (System.getProperty("os.name").startsWith("Mac")) {
 			String chromeDriverPath = System.getProperty("user.dir") + "chromedriver_mac";
