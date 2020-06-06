@@ -38,8 +38,8 @@ public class SetUp {
 	public void configureDriverPath() throws IOException {
 
 		if (System.getProperty("os.name").startsWith("Linux")) {
-			String chromeDriverPath = System.getProperty("user.dir") + "/chromedriver";
-			System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+			//String chromeDriverPath = System.getProperty("user.dir") + "/chromedriver";
+			//System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/geckodriver_linux");
 		}
 		if (System.getProperty("os.name").startsWith("Mac")) {
