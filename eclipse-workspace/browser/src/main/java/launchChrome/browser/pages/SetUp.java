@@ -40,6 +40,7 @@ public class SetUp {
 		if (System.getProperty("os.name").startsWith("Linux")) {
 			String chromeDriverPath = System.getProperty("user.dir") + "/chromedriver";
 			System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/geckodriver_linux");
 		}
 		if (System.getProperty("os.name").startsWith("Mac")) {
 			String chromeDriverPath = System.getProperty("user.dir") + "chromedriver_mac";
@@ -47,7 +48,7 @@ public class SetUp {
 		}
 		if (System.getProperty("os.name").startsWith("Windows")) {
 			String chromeDriverPath = System.getProperty("user.dir") + "/chromedriver_latest.exe";
-			System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+			//System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/geckodriver.exe");
 		}
 
@@ -88,7 +89,6 @@ public class SetUp {
 		
 		FirefoxProfile firefoxprofile = new FirefoxProfile();
 		firefoxprofile.addExtension(new File(System.getProperty("user.dir")  + "/metamaskNew.xpi"));
-		//firefoxprofile.addExtension(new File("C:\\Users\\Vinay\\Downloads\\metamaskNew.xpi"));
 		FirefoxOptions option = new FirefoxOptions();
 		option.setProfile(firefoxprofile);
 		option.setHeadless(true);
