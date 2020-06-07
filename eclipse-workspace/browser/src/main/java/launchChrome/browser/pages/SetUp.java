@@ -44,7 +44,7 @@ public class SetUp {
 	public void configureDriverPath() throws IOException {
 
 		if (System.getProperty("os.name").startsWith("Linux")) {
-			String chromeDriverPath = System.getProperty("user.dir") + "/chromedriverLinux84";
+			String chromeDriverPath = System.getProperty("user.dir") + "/chromedriver83";
 			System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 			//System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/geckodriverupdate");
 		}
