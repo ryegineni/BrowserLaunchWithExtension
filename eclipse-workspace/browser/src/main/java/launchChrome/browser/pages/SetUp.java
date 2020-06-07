@@ -44,9 +44,9 @@ public class SetUp {
 	public void configureDriverPath() throws IOException {
 
 		if (System.getProperty("os.name").startsWith("Linux")) {
-			String chromeDriverPath = System.getProperty("user.dir") + "/chromedriver";
+			String chromeDriverPath = System.getProperty("user.dir") + "/chromedriverLinux84";
 			System.setProperty("webdriver.chrome.driver", chromeDriverPath);
-			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/geckodriverupdate");
+			//System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/geckodriverupdate");
 		}
 		if (System.getProperty("os.name").startsWith("Mac")) {
 			String chromeDriverPath = System.getProperty("user.dir") + "chromedriver_mac";
@@ -75,7 +75,7 @@ public class SetUp {
 		  DesiredCapabilities caps = DesiredCapabilities.chrome();
 		  caps.setCapability(ChromeOptions.CAPABILITY, options);
 		  System.setProperty("webdriver.chrome.silentOutput", "true");
-			driver = new ChromeDriver(caps);
+		  driver = new ChromeDriver(caps);
 		  //Thread.sleep(5000);
 		/*
 		 * try { configureDriverPath(); } catch (IOException e) { e.printStackTrace(); }
@@ -144,7 +144,7 @@ public class SetUp {
 	@AfterSuite
 	public void afterSuite() {
 		if (driver != null) {
-			// driver.quit();
+			driver.quit();
 		}
 	}
 

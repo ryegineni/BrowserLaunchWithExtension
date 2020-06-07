@@ -1,17 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12475" started-at="2020-06-05T20:46:25Z" finished-at="2020-06-05T20:46:38Z">
+  <suite name="Default suite" duration-ms="284" started-at="2020-06-07T10:19:20Z" finished-at="2020-06-07T10:19:21Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12475" started-at="2020-06-05T20:46:25Z" finished-at="2020-06-05T20:46:38Z">
+    <test name="Default test" duration-ms="284" started-at="2020-06-07T10:19:20Z" finished-at="2020-06-07T10:19:21Z">
       <class name="launchChrome.browser.testcases.LaunchChromeTest">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:launchChrome.browser.testcases.LaunchChromeTest@130d63be]" name="beforeSuite" is-config="true" duration-ms="136401" started-at="2020-06-05T20:44:09Z" finished-at="2020-06-05T20:46:25Z">
+        <test-method status="FAIL" signature="beforeSuite()[pri:0, instance:launchChrome.browser.testcases.LaunchChromeTest@3c9d0b9d]" name="beforeSuite" is-config="true" duration-ms="154871" started-at="2020-06-07T10:16:44Z" finished-at="2020-06-07T10:19:19Z">
+          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
+            <message>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'VINAY', ip: '169.254.8.91', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: driver.version: FirefoxDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'VINAY', ip: '169.254.8.91', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: driver.version: FirefoxDriver
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:603)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:216)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:136)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:188)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:176)
+at launchChrome.browser.pages.SetUp.browserLaunch(SetUp.java:120)
+at launchChrome.browser.pages.SetUp.beforeSuite(SetUp.java:27)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.RuntimeException: NettyHttpHandler request execution error
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:72)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:47)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:55)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:105)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:138)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+... 26 more
+Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.TimeoutException: Request timeout to localhost/127.0.0.1:4267 after 60000 ms
+at java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:357)
+at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:1908)
+at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:201)
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:57)
+... 37 more
+Caused by: java.util.concurrent.TimeoutException: Request timeout to localhost/127.0.0.1:4267 after 60000 ms
+at org.asynchttpclient.netty.timeout.TimeoutTimerTask.expire(TimeoutTimerTask.java:43)
+at org.asynchttpclient.netty.timeout.RequestTimeoutTimerTask.run(RequestTimeoutTimerTask.java:50)
+at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:672)
+at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:747)
+at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:472)
+at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:launchChrome.browser.testcases.LaunchChromeTest@130d63be]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2020-06-05T20:46:27Z" finished-at="2020-06-05T20:46:27Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:launchChrome.browser.testcases.LaunchChromeTest@3c9d0b9d]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2020-06-07T10:19:21Z" finished-at="2020-06-07T10:19:21Z">
           <params>
             <param index="0">
               <value>
@@ -22,11 +92,81 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="browserLaunchWithExtension()[pri:0, instance:launchChrome.browser.testcases.LaunchChromeTest@130d63be]" name="browserLaunchWithExtension" duration-ms="10400" started-at="2020-06-05T20:46:27Z" finished-at="2020-06-05T20:46:38Z">
+        <test-method status="SKIP" signature="browserLaunchWithExtension()[pri:0, instance:launchChrome.browser.testcases.LaunchChromeTest@3c9d0b9d]" name="browserLaunchWithExtension" duration-ms="0" started-at="2020-06-07T10:19:21Z" finished-at="2020-06-07T10:19:21Z">
+          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
+            <message>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'VINAY', ip: '169.254.8.91', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: driver.version: FirefoxDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'VINAY', ip: '169.254.8.91', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: driver.version: FirefoxDriver
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:603)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:216)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:136)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:188)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:176)
+at launchChrome.browser.pages.SetUp.browserLaunch(SetUp.java:120)
+at launchChrome.browser.pages.SetUp.beforeSuite(SetUp.java:27)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.RuntimeException: NettyHttpHandler request execution error
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:72)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:47)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:55)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:105)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:138)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+... 26 more
+Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.TimeoutException: Request timeout to localhost/127.0.0.1:4267 after 60000 ms
+at java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:357)
+at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:1908)
+at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:201)
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:57)
+... 37 more
+Caused by: java.util.concurrent.TimeoutException: Request timeout to localhost/127.0.0.1:4267 after 60000 ms
+at org.asynchttpclient.netty.timeout.TimeoutTimerTask.expire(TimeoutTimerTask.java:43)
+at org.asynchttpclient.netty.timeout.RequestTimeoutTimerTask.run(RequestTimeoutTimerTask.java:50)
+at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:672)
+at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:747)
+at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:472)
+at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserLaunchWithExtension -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:launchChrome.browser.testcases.LaunchChromeTest@130d63be]" name="afterSuite" is-config="true" duration-ms="0" started-at="2020-06-05T20:46:43Z" finished-at="2020-06-05T20:46:43Z">
+        <test-method status="SKIP" signature="afterSuite()[pri:0, instance:launchChrome.browser.testcases.LaunchChromeTest@3c9d0b9d]" name="afterSuite" is-config="true" duration-ms="0" started-at="2020-06-07T10:19:23Z" finished-at="2020-06-07T10:19:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
