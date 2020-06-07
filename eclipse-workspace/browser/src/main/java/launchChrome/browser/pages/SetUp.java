@@ -14,6 +14,9 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.config.OperatingSystem;
+
 
 public class SetUp {
 	public static WebDriver driver = null;
@@ -56,8 +59,8 @@ public class SetUp {
 	}
 
 	public void browserLaunch() throws InterruptedException {
-		try { configureDriverPath(); 
-		} catch (IOException e) { e.printStackTrace(); }
+//		try { configureDriverPath(); 
+//		} catch (IOException e) { e.printStackTrace(); }
 		/*
 		 * try { configureDriverPath(); } catch (IOException e) { e.printStackTrace(); }
 		 * ChromeOptions options = new ChromeOptions();
@@ -89,11 +92,12 @@ public class SetUp {
 		 * driver.get("https://www.google.com/"); Thread.sleep(5000);
 		 * System.out.println("Page title="+driver.getTitle());
 		 */
-		//WebDriverManager.firefoxdriver().operatingSystem(OperatingSystem.LINUX).setup();
+		WebDriverManager.firefoxdriver().operatingSystem(OperatingSystem.LINUX).setup();
 				FirefoxProfile firefoxprofile = new FirefoxProfile();
 		firefoxprofile.addExtension(new File(System.getProperty("user.dir")  + "/metamaskNew.xpi"));
 		FirefoxOptions option = new FirefoxOptions();
 		option.setProfile(firefoxprofile);
+		option.setCapability("marionette", true);
 		//option.setHeadless(true);
 		//DesiredCapabilities caps = DesiredCapabilities.firefox();
 		//caps.setCapability(FirefoxDriver.PROFILE, firefoxprofile);
