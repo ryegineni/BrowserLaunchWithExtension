@@ -44,7 +44,7 @@ public class SetUp {
 		if (System.getProperty("os.name").startsWith("Linux")) {
 			//String chromeDriverPath = System.getProperty("user.dir") + "/chromedriver";
 			//System.setProperty("webdriver.chrome.driver", chromeDriverPath);
-			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/geckodriver_linux2664");
+			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/geckodriverupdate");
 		}
 		if (System.getProperty("os.name").startsWith("Mac")) {
 			String chromeDriverPath = System.getProperty("user.dir") + "chromedriver_mac";
@@ -52,15 +52,15 @@ public class SetUp {
 		}
 		if (System.getProperty("os.name").startsWith("Windows")) {
 			String chromeDriverPath = System.getProperty("user.dir") + "/chromedriver_latest.exe";
-			//System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+			System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/geckodriver.exe");
 		}
 
 	}
 
 	public void browserLaunch() throws InterruptedException {
-//		try { configureDriverPath(); 
-//		} catch (IOException e) { e.printStackTrace(); }
+		try { configureDriverPath(); 
+		} catch (IOException e) { e.printStackTrace(); }
 		/*
 		 * try { configureDriverPath(); } catch (IOException e) { e.printStackTrace(); }
 		 * ChromeOptions options = new ChromeOptions();
@@ -92,12 +92,12 @@ public class SetUp {
 		 * driver.get("https://www.google.com/"); Thread.sleep(5000);
 		 * System.out.println("Page title="+driver.getTitle());
 		 */
-		WebDriverManager.firefoxdriver().operatingSystem(OperatingSystem.LINUX).setup();
+		//WebDriverManager.firefoxdriver().operatingSystem(OperatingSystem.LINUX).setup();
 				FirefoxProfile firefoxprofile = new FirefoxProfile();
 		firefoxprofile.addExtension(new File(System.getProperty("user.dir")  + "/metamaskNew.xpi"));
 		FirefoxOptions option = new FirefoxOptions();
 		option.setProfile(firefoxprofile);
-		option.setCapability("marionette", true);
+		//option.setCapability("marionette", true);
 		//option.setHeadless(true);
 		//DesiredCapabilities caps = DesiredCapabilities.firefox();
 		//caps.setCapability(FirefoxDriver.PROFILE, firefoxprofile);
