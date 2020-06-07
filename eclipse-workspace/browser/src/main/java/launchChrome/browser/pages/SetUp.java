@@ -7,16 +7,18 @@ import java.lang.reflect.Method;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import io.github.bonigarcia.wdm.config.OperatingSystem;
-
+//import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.config.OperatingSystem;
 
 public class SetUp {
 	public static WebDriver driver = null;
@@ -42,8 +44,8 @@ public class SetUp {
 	public void configureDriverPath() throws IOException {
 
 		if (System.getProperty("os.name").startsWith("Linux")) {
-			//String chromeDriverPath = System.getProperty("user.dir") + "/chromedriver";
-			//System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+			String chromeDriverPath = System.getProperty("user.dir") + "/chromedriver";
+			System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/geckodriverupdate");
 		}
 		if (System.getProperty("os.name").startsWith("Mac")) {
@@ -58,9 +60,23 @@ public class SetUp {
 
 	}
 
+	@SuppressWarnings("deprecation")
 	public void browserLaunch() throws InterruptedException {
-		try { configureDriverPath(); 
-		} catch (IOException e) { e.printStackTrace(); }
+		try {
+			configureDriverPath();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		ChromeOptions options = new ChromeOptions();
+		  options.addArguments("--no-sandbox");
+		 // options.addArguments("--disable-dev-shm-usage"); Thread.sleep(5000);
+		  System.out.println("Installing metamask extension");
+		  options.addExtensions(new File(System.getProperty("user.dir") + "/extension_7_7_8_0.crx"));
+		  DesiredCapabilities caps = DesiredCapabilities.chrome();
+		  caps.setCapability(ChromeOptions.CAPABILITY, options);
+		  System.setProperty("webdriver.chrome.silentOutput", "true");
+			driver = new ChromeDriver(caps);
+		  //Thread.sleep(5000);
 		/*
 		 * try { configureDriverPath(); } catch (IOException e) { e.printStackTrace(); }
 		 * ChromeOptions options = new ChromeOptions();
@@ -92,43 +108,43 @@ public class SetUp {
 		 * driver.get("https://www.google.com/"); Thread.sleep(5000);
 		 * System.out.println("Page title="+driver.getTitle());
 		 */
-		//WebDriverManager.firefoxdriver().operatingSystem(OperatingSystem.LINUX).setup();
-				FirefoxProfile firefoxprofile = new FirefoxProfile();
-		firefoxprofile.addExtension(new File(System.getProperty("user.dir")  + "/metamaskNew.xpi"));
-		FirefoxOptions option = new FirefoxOptions();
-		option.setProfile(firefoxprofile);
-		//option.setCapability("marionette", true);
-		//option.setHeadless(true);
-		//DesiredCapabilities caps = DesiredCapabilities.firefox();
-		//caps.setCapability(FirefoxDriver.PROFILE, firefoxprofile);
-		//DesiredCapabilities capability = DesiredCapabilities.firefox();
-		//capability.setJavascriptEnabled(true);
-		//ProfilesIni profile = new ProfilesIni();
+		// WebDriverManager.firefoxdriver().operatingSystem(OperatingSystem.LINUX).setup();
+			/*
+			 * FirefoxProfile firefoxprofile = new FirefoxProfile();
+			 * firefoxprofile.addExtension(new File(System.getProperty("user.dir") +
+			 * "/metamaskNew.xpi")); FirefoxOptions option = new FirefoxOptions();
+			 * option.setProfile(firefoxprofile);
+			 */
+		// option.setCapability("marionette", true);
+		// option.setHeadless(true);
+		// DesiredCapabilities caps = DesiredCapabilities.firefox();
+		// caps.setCapability(FirefoxDriver.PROFILE, firefoxprofile);
+		// DesiredCapabilities capability = DesiredCapabilities.firefox();
+		// capability.setJavascriptEnabled(true);
+		// ProfilesIni profile = new ProfilesIni();
 //		FirefoxOptions firefoxOptions = new FirefoxOptions();
 //		FirefoxProfile profile = new FirefoxProfile();
 //
 //		profile.addExtension(new File("foxyproxy_basic-5.5-an+fx.xpi"));
 //
 //		firefoxOptions.setProfile(profile);
-		
 
-	//	FirefoxProfile firefoxprofile = profile.getProfile("ravi");
-		
-
+		// FirefoxProfile firefoxprofile = profile.getProfile("ravi");
 
 		//
-		//option.setProfile(firefoxProfile);
-		//capability.setCapability("firefox_profile", firefoxprofile);
-		driver = new FirefoxDriver(option);
-		Thread.sleep(3000);
-		System.out.println("Current url="+driver.getCurrentUrl());
+		// option.setProfile(firefoxProfile);
+		// capability.setCapability("firefox_profile", firefoxprofile);
+			/*
+			 * driver = new FirefoxDriver(option); Thread.sleep(3000);
+			 */
+		System.out.println("Current url=" + driver.getCurrentUrl());
 
 	}
 
 	@AfterSuite
 	public void afterSuite() {
 		if (driver != null) {
-			//driver.quit();
+			// driver.quit();
 		}
 	}
 
