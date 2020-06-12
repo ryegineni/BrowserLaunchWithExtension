@@ -137,7 +137,8 @@ public class SetUp {
 			/*
 			 * driver = new FirefoxDriver(option); Thread.sleep(3000);
 			 */
-		System.out.println("Current url=" + driver.getCurrentUrl());
+		System.out.println("Current url =" + driver.getCurrentUrl());
+		
 
 	}
 
