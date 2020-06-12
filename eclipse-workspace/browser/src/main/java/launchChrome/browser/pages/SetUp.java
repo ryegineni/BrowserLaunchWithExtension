@@ -69,7 +69,7 @@ public class SetUp {
 		}
 		ChromeOptions options = new ChromeOptions();
 		  options.addArguments("--no-sandbox");
-		 // options.addArguments("--disable-dev-shm-usage"); Thread.sleep(5000);
+		 // options.addArguments("--disable-dev-shm-usage");      Thread.sleep(5000);
 		  System.out.println("Installing metamask extension");
 		  options.addExtensions(new File(System.getProperty("user.dir") + "/extension_7_7_8_0.crx"));
 		  DesiredCapabilities caps = DesiredCapabilities.chrome();
