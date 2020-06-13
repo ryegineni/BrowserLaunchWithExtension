@@ -41,6 +41,7 @@ public class SetUp {
 		return driver;
 	}
 
+	
 	public void configureDriverPath() throws IOException {
 
 		if (System.getProperty("os.name").startsWith("Linux")) {
