@@ -121,6 +121,7 @@ public class SetUp {
 		// caps.setCapability(FirefoxDriver.PROFILE, firefoxprofile);
 		// DesiredCapabilities capability = DesiredCapabilities.firefox();
 		// capability.setJavascriptEnabled(true);
+		
 		// ProfilesIni profile = new ProfilesIni();
 //		FirefoxOptions firefoxOptions = new FirefoxOptions();
 //		FirefoxProfile profile = new FirefoxProfile();
