@@ -16,8 +16,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
-//import io.github.bonigarcia.wdm.WebDriverManager;
-//import io.github.bonigarcia.wdm.config.OperatingSystem;
+
 
 public class SetUp {
 	public static WebDriver driver = null;
