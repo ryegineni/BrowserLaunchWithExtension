@@ -23,6 +23,7 @@ public class SetUp {
 	public static FileInputStream fisprop = null;
 	public static Properties prop = new Properties();
 
+	
 	@BeforeSuite
 	public void beforeSuite() throws InterruptedException {
 		browserLaunch();
