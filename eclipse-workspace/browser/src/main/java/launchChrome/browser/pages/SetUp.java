@@ -77,6 +77,7 @@ public class SetUp {
 		  System.setProperty("webdriver.chrome.silentOutput", "true");
 		  driver = new ChromeDriver(caps);
 		  //Thread.sleep(5000);
+		
 		/*
 		 * try { configureDriverPath(); } catch (IOException e) { e.printStackTrace(); }
 		 * ChromeOptions options = new ChromeOptions();
